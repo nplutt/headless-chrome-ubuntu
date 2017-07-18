@@ -3,15 +3,11 @@ FROM ubuntu:16.04
 MAINTAINER Nick Plutt <nplutt@gmail.com>
 
 RUN apt-get update \
+    && apt-get install -y wget xvfb \
+    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list' \
+    && apt-get update \
+    && apt-get install -y google-chrome-stable \
     && apt-get -y install python-pip \
+    && pip install --upgrade pip \
     && pip install virtualenv
-#    && virtualenv node \
-#    && . node/bin/activate \
-#    && pip install nodeenv \
-#    && nodeenv -p \
-#    && npm install @angular/cli \
-#    && npm link @angular/cli \
-#    && ng new mucking \
-#    && cd mucking \
-#    && npm install \
-#    && ng build --target=production --environment=prod
