@@ -9,7 +9,7 @@ RUN apt-get update \
     && apt-get update \
     && apt-get install -y \
        google-chrome-stable \
-       dbus-x11 \
+       libglib2.0 \
        xvfb \
        python-pip \
     && pip install --upgrade pip \
