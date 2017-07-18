@@ -13,6 +13,6 @@ RUN apt-get update \
        xvfb \
        python-pip \
     && pip install --upgrade pip \
-    && pip inistall virtualenv
+    && pip install virtualenv
 
 ENV CHROME_BIN /usr/bin/google-chrome
