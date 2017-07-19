@@ -5,6 +5,7 @@ MAINTAINER Nick Plutt <nplutt@gmail.com>
 RUN apt-get update \
     && apt-get install -y git \
        python-pip \
+       libnss3 \
     && pip install --upgrade pip \
     && pip install virtualenv \
     && git clone https://github.com/adieuadieu/serverless-chrome.git \
