@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 MAINTAINER Nick Plutt <nplutt@gmail.com>
 
 RUN apt-get update \
-    && apt-get install -y git \
+    && apt-get install -y \
        python-pip \
        libnss3 \
        libgtk2.0-0 \
@@ -19,5 +19,6 @@ RUN apt-get update \
        libpng12-0 \ 
        libstdc++6-4.8-dbg-arm64-cross \
        libgcc1 \
+       libx11-xcb \
     && pip install --upgrade pip \
     && pip install virtualenv 
