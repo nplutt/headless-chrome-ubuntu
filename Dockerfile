@@ -20,8 +20,4 @@ RUN apt-get update \
        libstdc++6-4.8-dbg-arm64-cross \
        libgcc1 \
     && pip install --upgrade pip \
-    && pip install virtualenv \
-    && git clone https://github.com/adieuadieu/serverless-chrome.git \
-    && cd serverless-chrome/chrome \
-    && tar -zxvf chrome-headless-lambda-linux-x64.tar.gz \
-    && export CHROME_BIN=/serverless-chrome/chrome/headless-chrome/headless_shell
+    && pip install virtualenv 
