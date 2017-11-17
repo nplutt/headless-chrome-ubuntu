@@ -40,6 +40,7 @@ RUN apt-get update \
        libappindicator1 \
        libnss3 \
        lsb-release \
+       uuid-runtime \
        xdg-utils \
        wget \
     && pip install --upgrade pip \
