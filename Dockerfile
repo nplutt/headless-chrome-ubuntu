@@ -41,7 +41,9 @@ RUN apt-get update \
        libnss3 \
        lsb-release \
        uuid-runtime \
+       unzip \
        xdg-utils \
        wget \
+       zip \
     && pip install --upgrade pip \
     && pip install virtualenv 
